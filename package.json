@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/jamesfmac/dailykpi#readme",
   "dependencies": {
+    "aws-sdk": "^2.422.0",
     "dotenv": "^6.2.0",
     "googleapis": "^36.0.0",
     "mixpanel-data-export": "^2.0.2",
