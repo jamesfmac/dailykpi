@@ -1,0 +1,26 @@
+{
+  "name": "dailykpi",
+  "version": "0.1.0",
+  "description": "daily ga kpis in your inbox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesfmac/dailykpi.git"
+  },
+  "author": "james mcmanamey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesfmac/dailykpi/issues"
+  },
+  "homepage": "https://github.com/jamesfmac/dailykpi#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "googleapis": "^36.0.0",
+    "mixpanel-data-export": "^2.0.2",
+    "moment": "^2.24.0",
+    "numeral": "^2.0.6"
+  }
+}
