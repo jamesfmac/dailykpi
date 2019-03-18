@@ -50,12 +50,13 @@ let panel = new MixpanelExport({
 
 sendmail('jfmcmanamey@gmail.com', 
 
-"<html><p>Hey James, </p>\
+"<html>\
+<p>Hey James, </p>\
  </p>These are your numbers for yesterday:</p> <br/>\
  <br/>\
- <table style = 'text-align: left; border: 1px solid black; padding: 5px' >\
- <tr><th >Event Name</th> <th>" + moment(baselineDate).format('ddd, MMM do') + "</th> <th>"+moment(comparisonDate).format('ddd, MMM do')+"</th> <th>Difference</th></tr>\
- <tr><td>" +events[0] + "</td>"+ results[events[0]][`baselineCount`] +"<td> "+ results[events[0]][`comparisonCount`] +" </td> <td> "+ results[events[0]][`difference`] +"</td></tr>\
+ <table style = 'padding: 5px' >\
+ <tr style = 'border: 1px solid black;'><th >Event</th> <th>" + moment(baselineDate).format('Do MMM') + "</th> <th>"+moment(comparisonDate).format('Do MMM')+"</th> <th>Change`</th></tr>\
+ <tr style = 'text-align: right;'><td>" +events[0] + "</td>"+ results[events[0]][`baselineCount`] +"<td> "+ results[events[0]][`comparisonCount`] +" </td> <td> "+ results[events[0]][`difference`] +"</td></tr>\
  </table>\
  </html> ",
  
