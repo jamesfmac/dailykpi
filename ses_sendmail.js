@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
     require('dotenv').load();
 };
 
+module.exports = function(to, htmlMSG, textMSG ){
 
 // Load the AWS SDK for Node.js
 const AWS = require('aws-sdk');
@@ -24,7 +25,7 @@ var params = {
       /* more items */
     ],
     ToAddresses: [ 
-      'jfmcmanamey@gmail.com'
+      to
       /* more items */
     ]
   },
@@ -32,11 +33,11 @@ var params = {
     Body: { /* required */
       Html: {
        Charset: "UTF-8",
-       Data: "<html><p>Hey James, </p> </p>These are your numbers for today </p> </html> "
+       Data: htmlMSG
       },
       Text: {
        Charset: "UTF-8",
-       Data: "This is the fallback text" 
+       Data: textMSG
       }
      },
      Subject: {
@@ -62,3 +63,4 @@ sendPromise.then(
     function(err) {
     console.error(err, err.stack);
   });
+}
